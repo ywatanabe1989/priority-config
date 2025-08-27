@@ -55,7 +55,7 @@ The configuration resolution follows a clean precedence hierarchy:
 
 ```mermaid
 graph TD
-    A[resolve\(\)] --> B{direct_val?}
+    A[resolve] --> B{direct_val?}
     B -->|Yes| C[Use direct_val]
     B -->|No| D{Key in config_dict?}
     D -->|Yes| E[Use config_dict value]
