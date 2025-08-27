@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  local-ci:
+    build:
+      context: ../..
+      dockerfile: tests/github/Dockerfile
+    container_name: minimal-pip-project-ci
+    volumes:
+      # Mount project directory to see changes without rebuild
+      - ../..:/workspace
+      # Mount coverage reports output
+      - ./reports:/workspace/reports
+    environment:
+      - PYTHONPATH=/workspace/src
+    working_dir: /workspace
+    command: ["--verbose"]
+
+  # Additional service for testing in different Python versions
+  ci-python-311:
+    build:
+      context: ../..
+      dockerfile: tests/github/Dockerfile
+    container_name: minimal-pip-project-ci-py311
+    volumes:
+      - ../..:/workspace
+      - ./reports:/workspace/reports  
+    environment:
+      - PYTHONPATH=/workspace/src
+      - PYTHON_VERSION=3.11
+    working_dir: /workspace
