@@ -1,7 +1,7 @@
 # pyproject.toml
 [project]
 name = "priority-config"
-version = "0.1.0"
+version = "0.1.1"
 description = "Universal config resolver with precedence: direct → config → env → default"
 authors = [
     {name = "Yusuke Watanabe", email = "Yusuke.Watanabe@scitex.ai"}
