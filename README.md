@@ -1,5 +1,5 @@
 <!-- ---
-!-- Timestamp: 2025-08-27 17:09:53
+!-- Timestamp: 2025-09-01 08:21:59
 !-- Author: ywatanabe
 !-- File: /home/ywatanabe/proj/priority-config/README.md
 !-- --- -->
